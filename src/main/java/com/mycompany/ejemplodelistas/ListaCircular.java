@@ -17,7 +17,14 @@ public class ListaCircular<T> {
     
     
     
-    
+    public T getInicio()
+    {
+        return (T)inicio.getDato();
+    }
+    public T getFin()
+    {
+        return (T) fin.getDato();
+    }
     public void insertarInicio(T dato)
     {
         Nodo n = new Nodo();

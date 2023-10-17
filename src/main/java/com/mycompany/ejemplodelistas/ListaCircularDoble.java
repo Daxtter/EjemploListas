@@ -11,8 +11,21 @@ package com.mycompany.ejemplodelistas;
 public class ListaCircularDoble<T> {
     NodoDoble inicio;
     NodoDoble fin;
+
+    public ListaCircularDoble() {
+    }
     
     
+    
+    
+    public T getInicio()
+    {
+        return (T)inicio.getDato();
+    }
+    public T getFin()
+    {
+        return (T) fin.getDato();
+    }
     public void insertarInicio(T dato){
     NodoDoble n = new NodoDoble(dato, null, null);
     if (inicio ==null)

@@ -17,12 +17,34 @@ public class EjemploDeListas {
         //listad.eliminarDeXPosicion(1);
         //listad.in
         ListaCircular<Character> listC = new ListaCircular<>();
-        listC.insertarFin('a');
+        listC.insertarFin('A');
         listC.insertarFin('B');
         listC.insertarFin('C');
-        System.out.println(""+listC.recorrer());
-        listC.insertarEnXPosicion('h', 2);
-        System.out.println(""+listC.recorrer());
+        listC.insertarFin('D');
+        listC.insertarInicio('E');
+        System.out.println("El inicio es:"+listC.getInicio()+", El final es:"+listC.getFin());
+        System.out.println("Imprimir toda la lista  "+listC.recorrer());
+        listC.eliminarFin();
+        listC.eliminarInicio();
+        System.out.println("El inicio es:"+listC.getInicio()+", El final es:"+listC.getFin());
+        System.out.println("Imprimir toda la lista  "+listC.recorrer());
+        System.out.println("------------------------------");
+        System.out.println("Ahora con lista circular doble");
+        System.out.println("------------------------------");
+        
+        
+        ListaCircularDoble<Character> listCD = new ListaCircularDoble<>();
+        listCD.insertarFin('E');
+        listCD.insertarFin('I');
+        listCD.insertarFin('O');
+        listCD.insertarFin('U');
+        listCD.insertarInicio('A');
+        System.out.println("El inicio es:"+listCD.getInicio()+", El final es:"+listCD.getFin());
+        System.out.println("Imprimir toda la lista  "+listCD.recorrer());
+        listCD.eliminarFin();
+        listCD.eliminarInicio();
+        System.out.println("El inicio es:"+listCD.getInicio()+", El final es:"+listCD.getFin());
+        System.out.println("Imprimir toda la lista  "+listCD.recorrer());
         
         Comparator<Character> c =  (Character o1, Character o2) -> {
             return o1-o2;
